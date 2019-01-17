@@ -45,7 +45,7 @@ class ShopViewControllerTableViewController: UITableViewController {
         }
         // Configure the cell...
         cell.productName.text = product.name
-        cell.productPrice.text = String(format: "%.2f", product.price)
+        cell.productPrice.text = String(format: "$%.2f", product.price)
         cell.productImage.image = product.image
 
         return cell
