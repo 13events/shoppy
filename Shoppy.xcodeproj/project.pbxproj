@@ -61,11 +61,11 @@
 				82A03CAB21EFE93300633067 /* AppDelegate.swift */,
 				82A03CBF21EFFD0300633067 /* ShopViewControllerTableViewController.swift */,
 				82A03CC121F009BE00633067 /* ProductTableViewCell.swift */,
+				82A03CC321F021AF00633067 /* Product.swift */,
 				82A03CB121EFE93300633067 /* Main.storyboard */,
 				82A03CB421EFE93400633067 /* Assets.xcassets */,
 				82A03CB621EFE93400633067 /* LaunchScreen.storyboard */,
 				82A03CB921EFE93400633067 /* Info.plist */,
-				82A03CC321F021AF00633067 /* Product.swift */,
 			);
 			path = Shoppy;
 			sourceTree = "<group>";

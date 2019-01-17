@@ -28,4 +28,6 @@ class Product {
         self.description = description
         self.image = image
     }
+    
+    
 }

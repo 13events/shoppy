@@ -10,23 +10,26 @@ import UIKit
 
 class ShopViewControllerTableViewController: UITableViewController {
 
+    var products = [Product?]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //self.tableView.rowHeight = UITableView.automaticDimension
-       // self.tableView.estimatedRowHeight = 180
+       products = generateSampleProductList()
+        
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 2
+        return products.count
     }
 
     
@@ -37,15 +40,26 @@ class ShopViewControllerTableViewController: UITableViewController {
             
         }
 
+        guard let product = products[indexPath.row] else {
+            fatalError("Could not get product at index row.")
+        }
         // Configure the cell...
-        cell.productName.text = "Product Name goes here"
-        cell.productPrice.text = "Product price goes here."
-        cell.productImage.image = UIImage(imageLiteralResourceName: "first")
+        cell.productName.text = product.name
+        cell.productPrice.text = String(format: "%.2f", product.price)
+        cell.productImage.image = product.image
 
         return cell
     }
     
-
+    func generateSampleProductList() -> [Product?]{
+        
+        products.append(Product.init(name: "Cool Fork", price: 10.00, description: "Cool Fork", image: UIImage(named: "coolFork")))
+        products.append(Product.init(name: "Time Machine", price: 200.00, description: "Go back in time and save the world.", image: UIImage(named:"timeMachine")))
+        return products
+    }
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
