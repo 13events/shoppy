@@ -95,14 +95,31 @@ class ShopViewControllerTableViewController: UITableViewController {
     }
     */
 
-    /*
+   
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "shopDetailSegue"{
+            
+            //grab destination view controller
+            let shopDetailViewController = segue.destination as! ShopDetailViewController
+        
+            //get index path of selected row
+            guard  let indexPath = tableView?.indexPathForSelectedRow else {
+                fatalError("Failed to get selected index path for ShopDetailSegue transition.")
+            }
+            
+            //get product from products array
+            let product = products[indexPath.row]
+            
+            //TODO: Pass the product to the ShopDetailViewController.
+            shopDetailViewController.product = product
+        }
+        
     }
-    */
+    
 
 }
