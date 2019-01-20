@@ -11,14 +11,40 @@ import UIKit
 class ShopDetailViewController: UIViewController {
 
     var product: Product?
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productPriceLabel: UILabel!
+    @IBOutlet weak var productDescriptionLabel: UILabel!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print("\(product)")
+        
+        setCurvedBorders(label: productDescriptionLabel)
+        setProductLabels(product: product)
+        
+        }
         // Do any additional setup after loading the view.
+    
+    
+    func setCurvedBorders(label: UILabel){
+        productDescriptionLabel.layer.cornerRadius = 1
+        productDescriptionLabel.layer.borderWidth = 0.5
+        productDescriptionLabel.layer.borderColor = UIColor.black.cgColor
     }
     
+    func setProductLabels(product: Product?){
+        if let product = product {
+            productImage.image = product.image
+            productNameLabel.text = product.name
+            productPriceLabel.text = String(format: "$%.2f", product.price)
+            productDescriptionLabel.text = product.info
+            productDescriptionLabel.sizeToFit()
+        }
+    }
 
     /*
     // MARK: - Navigation

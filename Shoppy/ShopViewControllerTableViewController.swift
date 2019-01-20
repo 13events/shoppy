@@ -53,8 +53,8 @@ class ShopViewControllerTableViewController: UITableViewController {
     
     func generateSampleProductList() -> [Product?]{
         
-        products.append(Product.init(name: "Cool Fork", price: 10.00, description: "Cool Fork", image: UIImage(named: "coolFork")))
-        products.append(Product.init(name: "Time Machine", price: 200.00, description: "Go back in time and save the world.", image: UIImage(named:"timeMachine")))
+        products.append(Product.init(name: "Cool Fork", price: 10.00, info: "Cool Fork", image: UIImage(named: "coolFork")))
+        products.append(Product.init(name: "Time Machine", price: 200.00, info: "Go back in time and save the world.", image: UIImage(named:"timeMachine")))
         return products
     }
     

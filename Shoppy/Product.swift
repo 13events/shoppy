@@ -9,14 +9,20 @@
 import Foundation
 import UIKit
 
-class Product {
+//TODO add CustomStringConvertible protocol
+class Product: CustomStringConvertible {
     
     var name: String
     var price: Double
-    var description: String
+    var info: String
     var image: UIImage?
+    
+    var description: String {
+        
+        return "\(name), \(price), \(info), \(String(describing: image))"
+    }
 
-    init?(name: String, price: Double, description: String, image: UIImage?){
+    init?(name: String, price: Double, info: String, image: UIImage?){
         
         //initialization fails if there is no name or price is not a number.
         if name.isEmpty || price.isNaN{
@@ -25,7 +31,7 @@ class Product {
         
         self.name = name
         self.price = price
-        self.description = description
+        self.info = info
         self.image = image
     }
     
