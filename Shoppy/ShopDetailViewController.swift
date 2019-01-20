@@ -22,12 +22,11 @@ class ShopDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        //Setup UI
         setCurvedBorders(label: productDescriptionLabel)
         setProductLabels(product: product)
         
         }
-        // Do any additional setup after loading the view.
     
     
     func setCurvedBorders(label: UILabel){
