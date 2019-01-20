@@ -16,6 +16,7 @@ class ShopDetailViewController: UIViewController {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     
+    @IBOutlet weak var addToCartButton: UIButton!
     
     
     
@@ -45,6 +46,14 @@ class ShopDetailViewController: UIViewController {
         }
     }
 
+    @IBAction func addToCartButtonPressed(_ sender: Any) {
+        
+        if let product = product {
+            let productName = product.name
+            print("\(productName) added to cart.")
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
