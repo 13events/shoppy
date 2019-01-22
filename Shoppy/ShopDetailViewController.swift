@@ -43,6 +43,9 @@ class ShopDetailViewController: UIViewController {
             productPriceLabel.text = String(format: "$%.2f", product.price)
             productDescriptionLabel.text = product.info
             productDescriptionLabel.sizeToFit()
+        } else {
+            //ppossibly change UILabels to display error. 
+            fatalError("Transitioning View did not pass a Product object.")
         }
     }
 
