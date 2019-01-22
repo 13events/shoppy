@@ -16,6 +16,7 @@ class ShopDetailViewController: UIViewController {
     @IBOutlet weak var productPriceLabel: UILabel!
     @IBOutlet weak var productDescriptionLabel: UILabel!
     
+    @IBOutlet weak var addToCartButton: UIButton!
     
     
     
@@ -42,9 +43,20 @@ class ShopDetailViewController: UIViewController {
             productPriceLabel.text = String(format: "$%.2f", product.price)
             productDescriptionLabel.text = product.info
             productDescriptionLabel.sizeToFit()
+        } else {
+            //ppossibly change UILabels to display error. 
+            fatalError("Transitioning View did not pass a Product object.")
         }
     }
 
+    @IBAction func addToCartButtonPressed(_ sender: Any) {
+        
+        if let product = product {
+            let productName = product.name
+            print("\(productName) added to cart.")
+        }
+        
+    }
     /*
     // MARK: - Navigation
 

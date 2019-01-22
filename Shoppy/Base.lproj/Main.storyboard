@@ -180,19 +180,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CpL-Tx-tbb">
-                                        <rect key="frame" x="61.000000000000007" y="245" width="112.66666666666669" height="21"/>
+                                        <rect key="frame" x="61" y="245" width="113" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO2-o9-MeC">
-                                        <rect key="frame" x="61.000000000000007" y="274" width="112.66666666666669" height="20"/>
+                                        <rect key="frame" x="61" y="274" width="113" height="20"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfI-1z-KQU">
-                                        <rect key="frame" x="60.999999999999986" y="315" width="164.66666666666663" height="27"/>
+                                        <rect key="frame" x="61" y="315" width="165" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="hKy-vJ-5d1"/>
                                         </constraints>
@@ -200,14 +200,23 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q6D-Aa-nwn">
+                                        <rect key="frame" x="149" y="417" width="76" height="30"/>
+                                        <state key="normal" title="add to cart"/>
+                                        <connections>
+                                            <action selector="addToCartButtonPressed:" destination="LzP-FC-5fk" eventType="touchUpInside" id="pmj-yM-E3c"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="q6D-Aa-nwn" firstAttribute="top" secondItem="vfI-1z-KQU" secondAttribute="bottom" constant="75" id="3Mo-Bb-TGX"/>
                                     <constraint firstItem="z6s-58-JSr" firstAttribute="centerX" secondItem="xdE-4L-IHW" secondAttribute="centerX" id="73U-OT-Ivr"/>
                                     <constraint firstItem="z6s-58-JSr" firstAttribute="top" secondItem="xdE-4L-IHW" secondAttribute="top" constant="15" id="7MQ-oj-cIP"/>
                                     <constraint firstItem="CpL-Tx-tbb" firstAttribute="trailing" secondItem="jO2-o9-MeC" secondAttribute="trailing" id="9YC-mb-rh9"/>
                                     <constraint firstItem="jO2-o9-MeC" firstAttribute="trailing" secondItem="vfI-1z-KQU" secondAttribute="trailing" constant="-52" id="JtZ-GX-JEm"/>
                                     <constraint firstItem="vfI-1z-KQU" firstAttribute="top" secondItem="jO2-o9-MeC" secondAttribute="bottom" constant="21" id="Sd9-yZ-gOh"/>
                                     <constraint firstItem="CpL-Tx-tbb" firstAttribute="leading" secondItem="xdE-4L-IHW" secondAttribute="leading" constant="61" id="WCO-0J-UWE"/>
+                                    <constraint firstItem="q6D-Aa-nwn" firstAttribute="centerX" secondItem="z6s-58-JSr" secondAttribute="centerX" id="acP-nr-SVU"/>
                                     <constraint firstItem="CpL-Tx-tbb" firstAttribute="top" secondItem="z6s-58-JSr" secondAttribute="bottom" constant="17" id="adf-pm-Zvg"/>
                                     <constraint firstItem="CpL-Tx-tbb" firstAttribute="leading" secondItem="jO2-o9-MeC" secondAttribute="leading" id="moX-Yj-kJZ"/>
                                     <constraint firstItem="jO2-o9-MeC" firstAttribute="top" secondItem="CpL-Tx-tbb" secondAttribute="bottom" constant="8" symbolic="YES" id="ofh-6a-u54"/>
@@ -228,6 +237,7 @@
                         <viewLayoutGuide key="safeArea" id="Igy-JT-oak"/>
                     </view>
                     <connections>
+                        <outlet property="addToCartButton" destination="q6D-Aa-nwn" id="8MK-M6-VdZ"/>
                         <outlet property="productDescriptionLabel" destination="vfI-1z-KQU" id="gei-nM-Yv4"/>
                         <outlet property="productImage" destination="z6s-58-JSr" id="lsA-00-07F"/>
                         <outlet property="productNameLabel" destination="CpL-Tx-tbb" id="Crj-iv-JwK"/>
