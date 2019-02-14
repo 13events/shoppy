@@ -15,6 +15,7 @@
 		82A03CC021EFFD0300633067 /* ShopViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A03CBF21EFFD0300633067 /* ShopViewControllerTableViewController.swift */; };
 		82A03CC221F009BE00633067 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A03CC121F009BE00633067 /* ProductTableViewCell.swift */; };
 		82A03CC421F021AF00633067 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A03CC321F021AF00633067 /* Product.swift */; };
+		82E6F56021F6B62B009A7112 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E6F55F21F6B62B009A7112 /* Cart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		82A03CBF21EFFD0300633067 /* ShopViewControllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		82A03CC121F009BE00633067 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		82A03CC321F021AF00633067 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		82E6F55F21F6B62B009A7112 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				82A03CB421EFE93400633067 /* Assets.xcassets */,
 				82A03CB621EFE93400633067 /* LaunchScreen.storyboard */,
 				82A03CB921EFE93400633067 /* Info.plist */,
+				82E6F55F21F6B62B009A7112 /* Cart.swift */,
 			);
 			path = Shoppy;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				82A03CC421F021AF00633067 /* Product.swift in Sources */,
+				82E6F56021F6B62B009A7112 /* Cart.swift in Sources */,
 				82A03CC021EFFD0300633067 /* ShopViewControllerTableViewController.swift in Sources */,
 				82A03CAC21EFE93300633067 /* AppDelegate.swift in Sources */,
 				8243AB3621F15A1900840C0A /* ShopDetailViewController.swift in Sources */,
