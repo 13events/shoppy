@@ -11,6 +11,7 @@ import UIKit
 class ShopViewControllerTableViewController: UITableViewController {
 
     var products = [Product?]()
+    var  cart: Cart = Cart.getCart()
     
     override func viewDidLoad() {
         super.viewDidLoad()
